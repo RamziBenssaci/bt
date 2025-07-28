@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import threading
+from flask import Flask
+import os
 
 TELEGRAM_BOT_TOKEN = '7337234153:AAGVEJm4c1DAYuNGeyrtU5E3SspHNHNwyOs'
 TELEGRAM_CHAT_ID = '1939747032'
@@ -55,7 +58,20 @@ def check_khamsat():
     except Exception as e:
         print("Error while checking Khamsat:", e)
 
-if __name__ == "__main__":
+# Run bot in separate thread
+def start_bot_loop():
     while True:
         check_khamsat()
-        time.sleep(120)  # check every 2 minutes
+        time.sleep(120)  # Every 2 minutes
+
+# Minimal Flask app to keep service alive on Render
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return '✅ Khamsat bot is running!'
+
+if __name__ == '__main__':
+    threading.Thread(target=start_bot_loop).start()
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
