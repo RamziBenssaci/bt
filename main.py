@@ -6,9 +6,15 @@ TELEGRAM_BOT_TOKEN = '7337234153:AAGVEJm4c1DAYuNGeyrtU5E3SspHNHNwyOs'
 TELEGRAM_CHAT_ID = '1939747032'
 
 KEYWORDS = [
-    'متجر', 'موقع', 'برمجة', 'ووردبريس', 'Shopify', 'Laravel', 'مطور',
-    'تصميم', 'سلة', 'قالب', 'backend', 'frontend', 'موقع إلكتروني',
-    'مواقع', 'web', 'wordpress', 'store', 'موقع ويب'
+    'متجر', 'موقع', 'برمجة', 'ووردبريس', 'وردبريس', 'Shopify', 'shopify', 'Laravel', 'laravel', 'سلة', 'salla',
+    'مطور', 'مطور مواقع', 'تصميم', 'تصميم مواقع', 'تصميم متجر', 'قالب', 'قوالب', 'backend', 'frontend',
+    'موقع إلكتروني', 'مواقع', 'web', 'website', 'wordpress', 'woocommerce', 'متجر الكتروني', 'موقع ويب',
+    'تكويد', 'ديفلوبر', 'developer', 'web development', 'ecommerce', 'commerce', 'online store', 'landing page',
+    'shop', 'متجر اونلاين', 'إنشاء متجر', 'إنشاء موقع', 'برمجة موقع', 'تعريب قالب', 'تعريب',
+    'تحسين سرعة', 'سرعة الموقع', 'صيانة موقع', 'صيانة متجر', 'متجر ووردبريس', 'باك اند', 'فرونت اند',
+    'next.js', 'nuxt.js', 'react', 'vue', 'blade', 'shopify expert', 'salla expert', 'سلة برو',
+    'shopify dropshipping', 'دروبسشيبينغ', 'خدمة برمجة', 'خدمة متجر', 'إنشاء متجر سلة', 'إنشاء متجر Shopify',
+    'ربط الدفع', 'وسائل الدفع', 'تهيئة متجر', 'تهيئة موقع', 'خدمة تصميم', 'فريلانسر', 'فري لانس'
 ]
 
 SEEN_TITLES = set()
